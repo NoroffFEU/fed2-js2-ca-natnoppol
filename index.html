@@ -10,13 +10,24 @@
 </head>
 
 <body>
-  <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+  <a href="/">
+    <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+  </a>
 
   <h1>Home</h1>
 
   <a href="/profile/">My Profile</a>
+  <a href="/post/">Posts</a>
+  <a href="/post/create/">Create</a>
   <a href="/auth/login/">Login</a>
   <a href="/auth/register/">Register</a>
-  <button>Logout</button>
+  <button id="logoutButton">Logout</button>
+
+  <div id="searchProfileCon">
+    <input type="text" id="searchQueryProfile" placeholder="Search for profile by their name or bio...">
+    <button id="searchProfileSubmitBtn">Submit</button>
+  </div>
+  <div id="getAllProfiles"></div>
+  <div id="paginationContainer"></div>
 </body>
 </html>

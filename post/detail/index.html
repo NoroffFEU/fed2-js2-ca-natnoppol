@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
+
   </head>
+
   <body>
     <a href="/">
       <img src="/images/noroff-logo.png" alt="Noroff Logo" />
     </a>
-    <h1>Post Page</h1>
-    <div id="searchCon">
-      <input type="text" id="searchQuery" placeholder="Search for posts by their title or body...">
-      <button id="searchSubmitBtn">Submit</button>
+    <h1>Detail Post</h1>
+
+    <div id="detailPostCon"></div>
+
+    <div id="commentSection">
+      <h3>leave a comment</h3>
+      <form id="commentForm">
+        <textarea id="commentInput" placeholder="Type here..." required></textarea>
+        <button type="submit">Submit Comment</button>
+      </form>
     </div>
-    <div id="getAllPosts"></div>
-    <div id="paginationContainer"></div>
+    <div id="commentsList"></div>
+
   </body>
 </html>

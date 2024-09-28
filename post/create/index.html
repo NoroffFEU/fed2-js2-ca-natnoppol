@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
+
   </head>
   <body>
+    <a href="/">
+      <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+    </a>
+
     <h1>Create Post</h1>
 
+  <div class="postForm">
     <form name="createPost">
+      <label for="postTitle">Title</label>
+      <input type="text" name="title" required>
+
+      <label for="postBody">body</label>
+      <textarea name="body"  required></textarea>
+      
+      <label for="postTag">Tag</label>
+      <input type="text" name="tags" >
+
+      <label for="postMedia">Media</label>
+      <input type="url" name="media"  required>
+
       <button>Create Post</button>
     </form>
+  </div>
   </body>
 </html>
