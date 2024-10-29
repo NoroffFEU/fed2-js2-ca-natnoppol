@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,20 +9,56 @@
   </head>
 
   <body>
-    <h1>Login</h1>
-    <form name="login">
-      <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
-      </div>
+    <main>
+      <div class="container">
+        <section class="registration">
+          <div class="auth-container">
+            <div class="registration__content">
+              <a clas="site-logo" href="/">
+                <img
+                  class="logo-auth"
+                  src="/images/noroff-logo.png"
+                  alt="Noroff Logo"
+                />
+              </a>
+            </div>
+            <div class="login">
+              <form name="login">
+                <div class="field mb-3">
+                  <label class="field__label" for="email">Email</label>
+                  <input
+                    class="textfield"
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required />
+                <div class="field mb-3">
+                  <label class="field__label" for="password">Password</label>
+                  <input
+                    class="textfield"
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+                <div class="actions pt-3">
+                  <button class="btn btn-solid btn-primary">Login</button>
+                </div>
+              </form>
+            </div>
+            <div class="footer-auth">
+              <p class="pb-6">
+                Don't have an account?
+                <a class="link" href="/auth/register/">Register</a>
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <a href="/auth/register/">Register</a>
-      <button>Login</button>
-    </form>
+    </main>
   </body>
 </html>

@@ -10,3 +10,63 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
+/* home/index.html */
+.post-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 43.75rem;
+}
+
+.postForm form, .postEditContainer form {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+#paginationContainer, #paginationProfileCon{
+  display: flex;
+  gap: 1rem;
+  margin: 5rem;
+  flex-wrap: wrap;
+}
+#getAllPosts, #getAllProfiles{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+#detailPostCon, #commentSection{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem;
+}
+#commentForm textarea{
+  display: flex;
+  width: 200px;
+  height: 60px;
+
+}
+.singlePost{
+  width: 20rem;
+}
+.editSinglePostBtn{
+  margin: 1rem;
+}
+
+
+.post, .profiles{
+  flex: 1 1 calc(25% - 200px); 
+  border: 1px solid #ddd; 
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.post img, .singlePost img, .profiles img {
+  width: 100%; 
+  object-fit: cover;
+}

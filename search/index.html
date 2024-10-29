@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noroff FED2 JS2 CA</title>
+    <script type="module" src="/src/app.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="l-nav">
+        <a href="/">
+          <img class="logo" src="/images/noroff-logo.png" alt="Noroff Logo" />
+        </a>
+        <input
+          class="search-box form-control"
+          id="searchInput"
+          type="text"
+          placeholder="Search"
+        />
+      </div>
+      <div class="r-nav">
+        <a id="profile-link" class="nav-menu" href="/profile/">Profile</a>
+        <a id="follow-link" class="nav-menu" href="/follow/">Follow</a>
+        <a class="nav-menu" href="/post/create/">Create Post</a>
+        <button class="btn btn-danger ml-1" id="logout-btn">Logout</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <main>
+          <div class="search-wrapper">
+            <div class="search-result-container"></div>
+          </div>
+        </main>
+      </div>
+    </main>
+  </body>
+</html>

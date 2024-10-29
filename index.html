@@ -10,13 +10,49 @@
 </head>
 
 <body>
-  <img src="/images/noroff-logo.png" alt="Noroff Logo" />
-
-  <h1>Home</h1>
-
-  <a href="/profile/">My Profile</a>
-  <a href="/auth/login/">Login</a>
-  <a href="/auth/register/">Register</a>
-  <button>Logout</button>
+  <nav class="navbar">
+    <div class="nav-start">
+      <a clas="site-logo" href="/">
+        <img class="logo" src="/images/noroff-logo.png" alt="Noroff Logo" />
+      </a>
+      <div class="field field-search" id="header-search">
+        <form role="search" name="search">
+          <input
+            id="search-input"
+            class="input input-search"
+            placeholder="Search..."
+            id="q"
+            name="q"
+            type="text"
+          />
+          <button class="btn btn-search">
+            <ion-icon
+              class="icon icon-search"
+              name="search-outline"
+            ></ion-icon>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="nav-items">
+      <a class="nav-item" href="/profile/">My Profile</a>
+      <a class="nav-item" href="/post/create/">Create Post</a>
+      <button class="btn btn-solid btn-danger" id="btn-logout">Logout</button>
+    </div>
+  </nav>
+  
+  <main>
+    <div id="home" class="container">
+      <div class="main-content"></div>
+    </div>
+  </main>
 </body>
+<script
+type="module"
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+nomodule
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
 </html>

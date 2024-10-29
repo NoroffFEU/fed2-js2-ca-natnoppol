@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,111 @@
     <script type="module" src="/src/app.js"></script>
   </head>
   <body>
-    <h1>Create Post</h1>
+    <nav class="navbar">
+      <div class="nav-start">
+        <a clas="site-logo" href="/">
+          <img class="logo" src="/images/noroff-logo.png" alt="Noroff Logo" />
+        </a>
+        <div class="field field-search" id="header-search">
+          <form role="search" name="search">
+            <input
+              id="search-input"
+              class="input input-search"
+              placeholder="Search..."
+              id="q"
+              name="q"
+              type="text"
+            />
+            <button class="btn btn-search">
+              <ion-icon
+                class="icon icon-search"
+                name="search-outline"
+              ></ion-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="nav-items">
+        <a class="nav-item" href="/profile/">My Profile</a>
+        <a class="nav-item" href="/post/create/">Create Post</a>
+        <button class="btn btn-solid btn-danger" id="btn-logout">Logout</button>
+      </div>
+    </nav>
 
-    <form name="createPost">
-      <button>Create Post</button>
-    </form>
+    <main class="post">
+      <div id="post-create" class="container">
+        <div class="card">
+          <h2 class="post__create-title mb-4">Create Post</h2>
+          <form name="createPost">
+            <div class="field">
+              <label class="field__label" for="title">Title</label>
+              <input
+                class="textfield"
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Article title..."
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="field__label" for="body">Content</label>
+              <input
+                class="textfield"
+                type="text"
+                name="body"
+                id="body"
+                placeholder="Content body..."
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="field__label" for="tags">Tags</label>
+              <input
+                class="textfield"
+                type="text"
+                name="tags"
+                id="tags"
+                placeholder="Related tag, if there are multiple please separate by , e.g. technology, business"
+              />
+            </div>
+            <div class="field">
+              <label class="field__label" for="media">Article image</label>
+              <input
+                class="textfield"
+                type="text"
+                name="media"
+                id="media"
+                placeholder="Article image URL"
+              />
+            </div>
+            <div>
+              <label class="field__label" for="alt"
+                >Article image description for (accessibility)</label
+              >
+              <input class="textfield" type="text" name="alt" id="alt" />
+            </div>
+            <div class="post-create__actions">
+              <button class="btn btn-solid btn-primary">Submit</button>
+              <button
+                class="btn btn-solid btn-danger"
+                id="cancelAction"
+                type="button"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
   </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 </html>

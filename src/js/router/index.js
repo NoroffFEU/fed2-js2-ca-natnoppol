@@ -1,33 +1,22 @@
 // This function controls which JavaScript file is loaded on which page
 // In order to add additional pages, you will need to implement them below
 // You may change the behaviour or approach of this file if you choose
+import { authGuard } from '../utilities/authGuard';
+import { routes } from './routes';
+import utils from '../utilities/utils';
+
 export default async function router(pathname = window.location.pathname) {
-  switch (pathname) {
-    case "/":
-      await import("./views/home.js");
-      break;
-    case "/auth/":
-      await import("./views/auth.js");
-      break;
-    case "/auth/login/":
-      await import("./views/login.js");
-      break;
-    case "/auth/register/":
-      await import("./views/register.js");
-      break;
-    case "/post/":
-      await import("./views/post.js");
-      break;
-    case "/post/edit/":
-      await import("./views/postEdit.js");
-      break;
-    case "/post/create/":
-      await import("./views/postCreate.js");
-      break;
-    case "/profile/":
-      await import("./views/profile.js");
-      break;
-    default:
-      await import("./views/notFound.js");
+  const route = routes[pathname];
+  try {
+    const module = await import(/* @vite-ignore */ route.path);
+
+    // Check if the route is protected
+    if (route.protected && !authGuard()) {
+      alert('You must be logged in to view this page');
+      utils.redirectTo('/auth/login/');
+      return;
+    }
+  } catch (error) {
+    console.error('Error loading route module:', error);
   }
 }
