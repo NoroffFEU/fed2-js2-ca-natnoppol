@@ -18,7 +18,7 @@ export default defineConfig({
         profile: resolve(__dirname, './profile/index.html'),
         editProfile: resolve(__dirname, './profile/edit/index.html'),
         follow: resolve(__dirname, './follow/index.html'),
-        search: resolve(__dirname, './follow/search.html'),
+        search: resolve(__dirname, './search/index.html'),
       },
     },
   },
