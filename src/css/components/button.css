@@ -1,0 +1,20 @@
+.btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  left: -3rem;
+  width: 3rem;
+}
+.btn-danger {
+  box-shadow: unset;
+  color: var(--solid-white);
+  background-color: var(--danger-color);
+}
+.btn-danger-cancel {
+  box-shadow: unset;
+  color: var(--solid-white);
+  background-color: var(--danger-color);
+}

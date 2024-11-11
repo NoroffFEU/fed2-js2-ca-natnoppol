@@ -1,0 +1,19 @@
+form[role='search'] {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form[name='updateProfile'],
+  form[name='createPost'],
+  form[name='updatePost'] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--su-6);
+    width: 100%;
+  }
+  

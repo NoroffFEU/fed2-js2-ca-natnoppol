@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,47 +9,88 @@
   </head>
 
   <body>
-    <h1>Register</h1>
-
-    <form name="register">
+    <main>
       <div>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          required
-          maxlength="20"
-          pattern="^[\w]+$"
-          title="Please enter a username using only letters and numbers"
-        />
-      </div>
+        <section class="bg-gray-50 dark:bg-white">
+          <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
 
-      <div>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          required
-          pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-          title="Please enter a valid noroff.no or stud.noroff.no address"
-        />
-      </div>
+            <div>
+              <a href="/" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                <img class="h-8 w-auto" src="/images/noroff-logo.png" alt="Noroff Logo" />
+              </a>
+            </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          minlength="8"
-        />
-      </div>
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+              <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                  Create an account
+                </h1>
 
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
-    </form>
+                <form name="register" class="space-y-4 md:space-y-6">
+
+                  <div>
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="name">Your Name</label>
+                    <input
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      id="name"
+                      type="name"
+                      name="name"
+                      required
+                      maxlength="20"
+                      pattern="^[\w]+$"
+                      title="Please enter a username using only letters and numbers"
+                    />
+                  </div>
+
+        
+                  <div>
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="email">Your
+                      Email</label>
+                    <input
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      id="email"
+                      type="email"
+                      name="email"
+                      pattern="^[\w\-.]+@(stud\.)?noroff\.no$" 
+                      title="Please enter a valid noroff.no or stud.noroff.no address"
+                      placeholder="name@stud.noroff.no"
+                      required
+                    />
+                  </div>
+
+                 
+                  <div>
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="password">Password</label>
+                    <input
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      type="password"
+                      name="password"
+                      id="password"
+                      minlength="8"
+                      placeholder="••••••••"
+                      required
+                    />
+                  </div>
+
+
+                  <div>
+                    <button class="w-full text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                Already have an account?
+                <a class="font-medium text-primary-600 hover:underline dark:text-primary-500" href="/auth/login/">Log in.</a>
+              </p>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+
   </body>
 </html>
